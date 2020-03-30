@@ -9,15 +9,14 @@ const App = () => {
     <div>
       <div>
         <button onClick={() => setResource('posts')}>Posts</button>
-        <button onClick={() => setResource('to dos')}>To Dos</button>
+        <button onClick={() => setResource('todos')}>To Dos</button>
         <br/>
         <button onClick={() => setCount(++count)}>+</button>
         <button onClick={() => setCount(--count)}>-</button>
       </div>
-      {resource}
+      <ResourceList resource={resource}/>
       <br/>
       {count}
-      <ResourceList />
     </div>
   )
 }
